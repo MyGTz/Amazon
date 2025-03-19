@@ -1,7 +1,7 @@
 /* Amazon Link */
 
 // Base URL
-var URL_SITE = "https://coolv1994.github.io/Amazon";
+var URL_SITE = "https://a.gt.myz.info";
 
 // Default Tag
 var TAG_DEFAULT = "gawdtech-20";
