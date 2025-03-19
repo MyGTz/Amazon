@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Amazon Link</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="page">
+  <div id="redirect" class="hide">
+    <a id="url-redirect" href=""></a>
+  </div>
+  <div id="link" class="hide">
+    <div id="new">
+      <h1 id="new-title">New URL</h1>
+      <input type="text" id="url-new" size="60" readonly placeholder="Enter Amazon Item / List URL">
+      <br><br>
+      <button id="copy">Copy To Clipboard</button>
+    </div>
+    <hr class="separator">
+    <div id="old">
+      <p id="message" class="hide">Paste Amazon product / list URL below.</p>
+      <h1 id="old-title">Amazon URL</h1>
+      <textarea id="url-old" rows="10" cols="60" required placeholder="Paste Amazon Item / List URL Here
+        
+https://www.amazon.com/dp/[[ITEM_ID]]
+https://www.amazon.com/wishlist/[[LIST_ID]]
+"></textarea>
+      <br><br>
+      <button id="generate">Generate Link</button>
+      <button id="clear">Clear Text</button>
+    </div>
+  </div>
+  <div id="list" class="hide">
+    <h1 id="list-title">List</h1>
+    <p id="list-info">Description</p>
+    <ul id="list-items">
+      <li><a href="#">Item</a></li>
+    </ul>
+  </div>
+<noscript>
+  <div id="noscript">
+    <p>Enable JavaScript</p>
+  </div>
+</noscript>
+</div>
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript">
+//loadPage();
+</script>
+</body>
+</html>
