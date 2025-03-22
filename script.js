@@ -12,6 +12,8 @@ var URL_AMAZON = "https://www.amazon.com";
 var REGEX_ID_ITEM = "(dp)\/([A-Z0-9]{10})";
 // Regex: Amazon List URL
 var REGEX_ID_LIST = "(hz)?\/?(wishlist)\/(ls)?\/?([A-Z0-9]{13})";
+// Regex: Amazon Store URL
+var REGEX_ID_STORE = "(stores)\/(.?)\/?(page)\/([A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12})";
 
 
 /**
