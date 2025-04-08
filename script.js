@@ -8,6 +8,9 @@
 // Amazon Base URL
 var URL_AMAZON = "https://www.amazon.com";
 
+// List API
+var URL_API_LIST = "https://api.gt.myz.info/Amazon_List/";
+
 // Regex: Amazon Item URL
 var REGEX_ID_ITEM = "(dp)\/([A-Z0-9]{10})";
 // Regex: Amazon List URL
@@ -63,6 +66,14 @@ function urlSiteList (listID, tagID)
 {
   var url = `${URL_SITE}/?list=${listID}`;
   if (tagID) url += `&tag=${tagID}`;
+  return url;
+}
+
+// Get List API URL
+function urlApiList (listID, sort)
+{
+  var url = `${URL_API_LIST}?id=${listID}`;
+  if (sort) url += `&sort=${sort}`;
   return url;
 }
 
@@ -148,8 +159,9 @@ function idListFromURL (url)
 
 
 // Download and Parse Web Page
-function downloadList(url)
+function downloadList(id, sort)
 {
+  var url = urlApiList(id, sort);
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
   xhr.onload = () => {
