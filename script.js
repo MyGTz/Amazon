@@ -179,19 +179,19 @@ function downloadList(id, sort)
 }
 
 
-function parseListData (text)
+function parseListData (data)
 {
-  if (!text) {
-    setListInfo("Error: Response Empty");
+  if (!data) {
+    setListInfo("Error: Invalid Response");
     return;
   }
-  var doc = new DOMParser().parseFromString(text, 'text/html');
-  console.log("[DOC] "+doc);
-  if (!doc) {
-    setListInfo("Error: Invalid Document");
+  var list = JSON.parse(data);
+  console.log("[JSON] "+list);
+  if (!list) {
+    setListInfo("Error: Invalid Data");
     return;
   }
-  var list = new ListData(doc);
+//  var list = new ListData(doc);
   console.log("[LIST] "+list);
   setListInfo(list.name, list.desc);
   setListItems(list.items);
